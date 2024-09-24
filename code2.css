@@ -1,0 +1,93 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+
+}
+
+#wrappeer{
+    height:100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+}
+.container{
+    height:100%;    
+    width: 1200px;
+    margin:0 auto;
+    /* means left or right ka margin dono side se equal 
+    taki image centre me aajaye*/
+    padding:20px;
+    /*content oe border ke bich ke space ko 
+    padding kehete h*/
+
+}
+.container h1{
+    margin:20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    color:indianred;
+}
+.container h1:hover{
+    transform: scale(2.03);
+    transition: 0.3s;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.card{
+    width:32%;
+    position:relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.card img{
+    height:400px;
+    width:400px;
+    filter: grayscale(100%);
+    box-shadow: 0 0 200px #333;
+    /*object-fit:cover;[right now not needed]*/
+    
+
+}
+.card:hover{
+    transform: scale(1.03);
+    filter:drop-shadow(0 0 10px #333);
+    /* filter is used to give shadow to cards*/
+    transition:0.3s;
+    /*transition set the timing of card to 
+    increase the size*/
+
+}
+.card:hover img{
+    filter:grayscale(0%);
+    /*filter hover krne ke bad color wapas lane le liye*/
+}
+.card figcaption{
+    position: absolute;
+    bottom:0;
+    left:0;
+    padding:25px;
+    width:100%;
+    height:20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity:0;
+    /* opacity is used to for transparence of text */
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 50%);
+    transition: 0.3s;
+
+}
+.card:hover figcaption{
+    opacity:1;
+    transform:scale(1.03);
+}
